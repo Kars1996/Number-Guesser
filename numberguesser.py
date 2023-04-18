@@ -1,9 +1,24 @@
+#Sen is the mother
 #Moduel Stuff
-import os
+import os, sys
 import time
 import random
 from time import sleep
 import getpass
+import logging
+
+#Debugging Stuff
+DebuggingFile = True
+debuggingmode = False
+if debuggingmode == True:
+    try:
+        os.remove('PasswordGenDebugging.txt')
+    except FileNotFoundError:
+        DebuggingFile = False
+    logging.basicConfig(filename='PasswordGenDebugging.txt', level = logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.debug('Starting program')
+    if DebuggingFile == True:
+        logging.debug('Cleared old debug file')
 
 #Gradients that i stole
 def blue(text):
@@ -176,6 +191,7 @@ def credits():
         print(red('        Thank you for using my number gen'))
         time.sleep(2)
         print(water('        Have a nice day :D'))
+        time.sleep(3)
         quit()
     if updates == 'y':
         updatehist()
@@ -196,6 +212,30 @@ def simple():
     hub = 'aW1wb3J0IHJhbmRvbQpudW1iZXIgPSByYW5kb20ucmFuZGludCgxLDIwMCkKdHJpZXMgPSAwCnByaW50KCdJIGFtIHRoaW5raW5nIG9mIGEgbnVtYmVyIGJldHdlZW4gMSBhbmQgMjAwJykKcHJpbnQoJ1BsZWFzZSBpbnB1dCB5b3VyIGd1ZXNzJykKd2hpbGUgVHJ1ZToKICAgIGd1ZXNzID0gaW50KGlucHV0KCc+JykpCiAgICBpZiBndWVzcyBub3QgaW4gcmFuZ2UoMSwgMjAxKToKICAgICAgICBwcmludCgnUGxlYXNlIGlucHV0IGEgbnVtYmVyIGJldHdlZW4gMSBhbmQgMjAwJykKICAgICAgICBjb250aW51ZQogICAgaWYgZ3Vlc3MgPiBudW1iZXI6CiAgICAgICAgcHJpbnQoJ1lvdXIgZ3Vlc3Mgd2FzIHRvbyBoaWdoLCBwbGVhc2UgdHJ5IGFnYWluJykKICAgICAgICB0cmllcyArPSAxCiAgICAgICAgY29udGludWUKICAgIGlmIGd1ZXNzIDwgbnVtYmVyOgogICAgICAgIHByaW50KCdZb3VyIGd1ZXNzIHdhcyB0b28gbG93LCBwbGVhc2UgdHJ5IGFnYWluJykKICAgICAgICB0cmllcyArPSAxCiAgICAgICAgY29udGludWUKICAgIGlmIGd1ZXNzID09IG51bWJlcjoKICAgICAgICBwcmludCgnQ29uZ3JhdHMsIHlvdSBnb3QgaXQgcmlnaHQhJykKICAgICAgICBwcmludChmJ0l0IHRvb2sgeW91IHt0cmllc30gdHJpZXMnKQogICAgICAgIGJyZWFr=='
     run = eval(compile(base64.b64decode(eval('hub')), '<string>', 'exec'))
 
+#Cool Astetic Loading Bar
+def LoadingBar():
+    clear()
+    print(blue(banner))
+    time.sleep(0.4)
+    print('Restarting:')
+    time.sleep(0.3)
+    toolbar_width = 40
+    # setup toolbar
+    sys.stdout.write("[%s]" % (" " * toolbar_width))
+    sys.stdout.flush()
+    sys.stdout.write("\b" * (toolbar_width+1)) # return to start of line, after '['
+    i=0
+    while i < toolbar_width:
+        i=i+1
+        time.sleep(0.1) # do real work here
+    # update the bar
+        sys.stdout.write("=")
+        sys.stdout.flush()
+    sys.stdout.write("]\n") # this ends the progress bar
+    print(green + 'Sucsess!')
+    time.sleep(2)
+    Introduction()
+
 #Simple debugging things (Will add more soon)
 def debugging():
     global debuggingmode
@@ -207,13 +247,23 @@ def debugging():
     print(water('        [$] Logging will be added soon'))
     print(red('        [!] Starting program in 5 seconds'))
     time.sleep(5)
-    NumberGuesserInto()
+    print(red('        [?] Would you like to restart the program? [Y/N]'))
+    Restart = input(str('        >')).lower()
+    if Restart == 'y':
+        print(red('        [!] Restarting'))
+        time.sleep(3)
+        LoadingBar()
+    if Restart == 'n':
+        print(red('        [!] Continuing with the program'))
+        NumberGuesserInto()
+
 
 #History of all past updates
 def updatehist():
     clear()
     print(blue(banner))
     print(blue(f"                                    [>] Update Lists"))
+    print(blue('        [+] 1.3.5 - Fixxed logging'))
     print(blue('        [+] 1.3.4 - Fixed bug'))
     print(blue('        [+] 1.3.4 - Fixed an error caused by adding a debugging mode'))
     print(blue('        [+] 1.3.3 - Fixed a dumb oversight'))
@@ -244,7 +294,7 @@ def Introduction():
     debuggingmode = False
     clear()
     print(blue(banner))
-    print(blue(f"                                    [>] Running version 1.3.5"))
+    print(blue(f"                                    [>] Running version 1.3.6"))
     print(purple('\n\n        Welcome to my shit number guesser. I was bored and i had mothing better to do'))
     secretdebugging = getpass.getpass(prompt=purple('        [+] Press Enter to continue ')).lower()
     if secretdebugging == 'debug':
