@@ -214,6 +214,7 @@ def updatehist():
     clear()
     print(blue(banner))
     print(blue(f"                                    [>] Update Lists"))
+    print(blue('        [+] 1.3.4 - Fixed bug'))
     print(blue('        [+] 1.3.4 - Fixed an error caused by adding a debugging mode'))
     print(blue('        [+] 1.3.3 - Fixed a dumb oversight'))
     print(blue('        [+] 1.3.2 - Implemented some easter eggs'))
@@ -231,6 +232,9 @@ def updatehist():
     print(blue('        [+] 1.1.1 - Idr'))
     print(blue('        [+] 1.1.0 - Reworked Introduction and stuff'))
     print(red('        [+] 0.0.1 - Started Work on the number guesser'))
+    getpass.getpass(prompt=red(
+                '        [+] Press Enter to exit the program'))
+    quit
     
     
     
@@ -240,7 +244,7 @@ def Introduction():
     debuggingmode = False
     clear()
     print(blue(banner))
-    print(blue(f"                                    [>] Running version 1.3.4"))
+    print(blue(f"                                    [>] Running version 1.3.5"))
     print(purple('\n\n        Welcome to my shit number guesser. I was bored and i had mothing better to do'))
     secretdebugging = getpass.getpass(prompt=purple('        [+] Press Enter to continue ')).lower()
     if secretdebugging == 'debug':
