@@ -1,6 +1,7 @@
 <div align="center" id="top"> 
 <img src="./image.png">
 </div>
+</br>
 
 <h1 align="center">Number Guesser</h1>
 ## :dart: About ##
@@ -9,13 +10,15 @@ I haven't realy coded in python for the past few years so i have been using thes
 Ty freezer for ur help, ur the best :heart:
 
 </div>
+</br>
 ## :sparkles: Features ##
 
 :heavy_check_mark: Number guesser bit\
 :heavy_check_mark: Debugging/Logging (Soon)\
 :heavy_check_mark: Updates and credits\
-:heavy_check_mark: Easter Eggs (Soon:tm:)\
+:heavy_check_mark: Easter Eggs (Soon:tm:)
 
 </div>
+</br>
 ty for reading my incoherant nonsense
 
