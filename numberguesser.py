@@ -132,7 +132,7 @@ def NumberGuesserInto():
         
     if gotit == 'y':
         print(red('        Intitialising...'))
-        time.sleep(random.randint(2,7))
+        time.sleep(random.randint(2,4))
         NumberGuesserThing()
     if gotit == 'n':
         print(water('        cool ig'))
@@ -269,6 +269,7 @@ def updatehist():
     clear()
     print(blue(banner))
     print(blue(f"                                    [>] Update Lists"))
+    print(blue('        [+] 1.3.6 - Added a cmd title and fixed exe up'))
     print(blue('        [+] 1.3.5 - Fixxed logging'))
     print(blue('        [+] 1.3.4 - Fixed bug'))
     print(blue('        [+] 1.3.4 - Fixed an error caused by adding a debugging mode'))
