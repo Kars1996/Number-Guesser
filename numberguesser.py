@@ -6,6 +6,7 @@ import random
 from time import sleep
 import getpass
 import logging
+import ctypes
 
 #Debugging Stuff
 DebuggingFile = True
@@ -100,6 +101,11 @@ def clear():
 #Error Stuff
 def error(error):
     print(purple(f"        [!] Error : {error}"))
+    
+# Console Ttle on windows
+def set_title(title):
+    ctypes.windll.kernel32.SetConsoleTitleW(title)
+set_title("Number Guesser | By Kars#1996")
     
     
 #Banner and shit
