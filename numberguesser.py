@@ -8,6 +8,9 @@ import getpass
 import logging
 import ctypes
 
+
+
+
 #Debugging Stuff
 DebuggingFile = True
 debuggingmode = False
@@ -302,7 +305,7 @@ def Introduction():
     clear()
     print(blue(banner))
     print(blue(f"                                    [>] Running version 1.3.6"))
-    print(purple('\n\n        Welcome to my shit number guesser. I was bored and i had mothing better to do'))
+    print(purple('\n\n        [/] Welcome to my number guesser. This was mainly a gui test for python'))
     secretdebugging = getpass.getpass(prompt=purple('        [+] Press Enter to continue ')).lower()
     if secretdebugging == 'debug':
         print(red('        [$] Enabling Debugging Mode'))
