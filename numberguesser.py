@@ -270,6 +270,7 @@ def debugging():
 #History of all past updates
 def updatehist():
     clear()
+    #Never putting this in a string Regor :3
     print(blue(banner))
     print(blue(f"                                    [>] Update Lists"))
     print(blue('        [+] 1.3.6 - Added a cmd title and fixed exe up'))
