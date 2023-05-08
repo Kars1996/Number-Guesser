@@ -122,7 +122,7 @@ banner = '''                 ::::::::  :::    ::: :::::::::: ::::::::   ::::::::
             
 #bro idek at this point
 def NumberGuesserInto():
-    numberoffuckups = 0
+    numberoffuckups = 0 #Depreciated
     clear()
     print(blue(banner))
     print(red('        Heres how this shit works'))
@@ -146,7 +146,7 @@ def NumberGuesserInto():
 #main number guesser
 def NumberGuesserThing():
     clear()
-    attempts = 1
+    attempts = 0
     print(blue(banner))
     randomnumber = random.randint(1, 200)
     print(water(
@@ -176,6 +176,7 @@ def NumberGuesserThing():
             attempts += 1
             continue
         if NumberGuess == randomnumber:
+            attempts += 1
             print(green + '        [!] Congrtas! You got the correct number!')
             print(blue(f'        [!] It took you {attempts} attempts.'))
             getpass.getpass(prompt=purple(
@@ -270,7 +271,6 @@ def debugging():
 #History of all past updates
 def updatehist():
     clear()
-    #Never putting this in a string Regor :3
     print(blue(banner))
     print(blue(f"                                    [>] Update Lists"))
     print(blue('        [+] 1.3.6 - Added a cmd title and fixed exe up'))
