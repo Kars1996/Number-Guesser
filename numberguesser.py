@@ -214,6 +214,11 @@ def simple():
     time.sleep(1.66)
     print(red('        [!] Simplifying'))
     time.sleep(2)
+    randomcrash = random.randint(1,20)
+    if randomcrash == 7:
+        error('Failed to simplify code')
+        time.sleep(3)
+        quit
     print(green + '        [!] Sucsess!')
     time.sleep(3)
     print(white + ' ')
