@@ -111,7 +111,7 @@ def set_title(title):
 set_title("Number Guesser | By Kars#1996")
     
     
-#Banner and shit
+#Banner
 banner = '''                 ::::::::  :::    ::: :::::::::: ::::::::   ::::::::  :::::::::: ::::::::: 
                 :+:    :+: :+:    :+: :+:       :+:    :+: :+:    :+: :+:        :+:    :+: 
                +:+        +:+    +:+ +:+       +:+        +:+        +:+        +:+    +:+  
@@ -122,24 +122,23 @@ banner = '''                 ::::::::  :::    ::: :::::::::: ::::::::   ::::::::
             
 #bro idek at this point
 def NumberGuesserInto():
-    numberoffuckups = 0 #Depreciated
     clear()
     print(blue(banner))
-    print(red('        Heres how this shit works'))
+    print(red('        Heres how this Program works'))
     print(red('        The program will pick a number beetween 1 and 200'))
     print(water('        Your job is to guess it, the program will tell you if it is higher or lower'))
     gotit = input(str(purple('\n        Do you understand?')+ water(' [Y/N]'))).lower()
     while gotit not in ['y', 'n']:
-        error('You dumfuck pick Y or N')
+        error('Please pick  either Y or N')
         gotit = input(str(purple('\n        Do you understand?')+ water(' [Y/N]'))).lower()
         
     if gotit == 'y':
         print(red('        Intitialising...'))
-        time.sleep(random.randint(2,4))
+        time.sleep(random.randint(1,4))
         NumberGuesserThing()
     if gotit == 'n':
-        print(water('        cool ig'))
-        time.sleep(4)
+        print(water('        Ok'))
+        time.sleep(3)
         quit()
         
 
@@ -181,7 +180,7 @@ def NumberGuesserThing():
             print(blue(f'        [!] It took you {attempts} attempts.'))
             getpass.getpass(prompt=purple(
                 '        [+] Press Enter to continue '))
-            time.sleep(random.randint(2, 7))
+            time.sleep(random.randint(1, 7))
             break
     credits()
 
@@ -192,16 +191,17 @@ def credits():
     print(blue(f"                                    [>] By Kars#1996"))
     print(white + '        Thank you to' + magenta + ' freezer#3008 ' + white + 'For helping me go through the code and proof read it')
     print('        Thank you to the pylexnodes discord and all the other people who saw the gui')
-    print(purple('        Thank you to you for using this shit project :D'))
+    print(purple('        Thank you to you for running this project :D'))
+    print(purple('        This was nothing more than just a opportunity for me to relearn python, ty to all that helped me'))
     updates = input(str(red('        Would you like to go through all the updates for this project? [Y/N]'))).lower()
     while updates not in ['y', 'n']:
-        error('Dude, come on. its y or no its not that hard')
+        error('Please pick  either Y or N')
         updates = input(str(red('        Would you like to go through all the updates for this project? [Y/N]'))).lower()
     if updates == 'n':
         print(red('        Thank you for using my number gen'))
-        time.sleep(2)
+        time.sleep(.8)
         print(water('        Have a nice day :D'))
-        time.sleep(3)
+        time.sleep(2)
         quit()
     if updates == 'y':
         updatehist()
@@ -211,16 +211,16 @@ def simple():
     clear()
     print(blue(banner))
     print(red('        [$] Clearing files'))
-    time.sleep(2)
+    time.sleep(1.66)
     print(red('        [!] Simplifying'))
-    time.sleep(3)
+    time.sleep(2)
     print(green + '        [!] Sucsess!')
     time.sleep(3)
     print(white + ' ')
     clear()
     import base64, codecs
-    hub = 'aW1wb3J0IHJhbmRvbQpudW1iZXIgPSByYW5kb20ucmFuZGludCgxLDIwMCkKdHJpZXMgPSAwCnByaW50KCdJIGFtIHRoaW5raW5nIG9mIGEgbnVtYmVyIGJldHdlZW4gMSBhbmQgMjAwJykKcHJpbnQoJ1BsZWFzZSBpbnB1dCB5b3VyIGd1ZXNzJykKd2hpbGUgVHJ1ZToKICAgIGd1ZXNzID0gaW50KGlucHV0KCc+JykpCiAgICBpZiBndWVzcyBub3QgaW4gcmFuZ2UoMSwgMjAxKToKICAgICAgICBwcmludCgnUGxlYXNlIGlucHV0IGEgbnVtYmVyIGJldHdlZW4gMSBhbmQgMjAwJykKICAgICAgICBjb250aW51ZQogICAgaWYgZ3Vlc3MgPiBudW1iZXI6CiAgICAgICAgcHJpbnQoJ1lvdXIgZ3Vlc3Mgd2FzIHRvbyBoaWdoLCBwbGVhc2UgdHJ5IGFnYWluJykKICAgICAgICB0cmllcyArPSAxCiAgICAgICAgY29udGludWUKICAgIGlmIGd1ZXNzIDwgbnVtYmVyOgogICAgICAgIHByaW50KCdZb3VyIGd1ZXNzIHdhcyB0b28gbG93LCBwbGVhc2UgdHJ5IGFnYWluJykKICAgICAgICB0cmllcyArPSAxCiAgICAgICAgY29udGludWUKICAgIGlmIGd1ZXNzID09IG51bWJlcjoKICAgICAgICBwcmludCgnQ29uZ3JhdHMsIHlvdSBnb3QgaXQgcmlnaHQhJykKICAgICAgICBwcmludChmJ0l0IHRvb2sgeW91IHt0cmllc30gdHJpZXMnKQogICAgICAgIGJyZWFr=='
-    run = eval(compile(base64.b64decode(eval('hub')), '<string>', 'exec'))
+    Simple = 'aW1wb3J0IHJhbmRvbQpudW1iZXIgPSByYW5kb20ucmFuZGludCgxLDIwMCkKdHJpZXMgPSAwCnByaW50KCdJIGFtIHRoaW5raW5nIG9mIGEgbnVtYmVyIGJldHdlZW4gMSBhbmQgMjAwJykKcHJpbnQoJ1BsZWFzZSBpbnB1dCB5b3VyIGd1ZXNzJykKd2hpbGUgVHJ1ZToKICAgIGd1ZXNzID0gaW50KGlucHV0KCc+JykpCiAgICBpZiBndWVzcyBub3QgaW4gcmFuZ2UoMSwgMjAxKToKICAgICAgICBwcmludCgnUGxlYXNlIGlucHV0IGEgbnVtYmVyIGJldHdlZW4gMSBhbmQgMjAwJykKICAgICAgICBjb250aW51ZQogICAgaWYgZ3Vlc3MgPiBudW1iZXI6CiAgICAgICAgcHJpbnQoJ1lvdXIgZ3Vlc3Mgd2FzIHRvbyBoaWdoLCBwbGVhc2UgdHJ5IGFnYWluJykKICAgICAgICB0cmllcyArPSAxCiAgICAgICAgY29udGludWUKICAgIGlmIGd1ZXNzIDwgbnVtYmVyOgogICAgICAgIHByaW50KCdZb3VyIGd1ZXNzIHdhcyB0b28gbG93LCBwbGVhc2UgdHJ5IGFnYWluJykKICAgICAgICB0cmllcyArPSAxCiAgICAgICAgY29udGludWUKICAgIGlmIGd1ZXNzID09IG51bWJlcjoKICAgICAgICBwcmludCgnQ29uZ3JhdHMsIHlvdSBnb3QgaXQgcmlnaHQhJykKICAgICAgICBwcmludChmJ0l0IHRvb2sgeW91IHt0cmllc30gdHJpZXMnKQogICAgICAgIGJyZWFr=='
+    run = eval(compile(base64.b64decode(eval('Simple')), '<string>', 'exec'))
 
 #Cool Astetic Loading Bar
 def LoadingBar():
